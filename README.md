@@ -17,6 +17,6 @@ This library depends on the [Web Crypto API](https://developer.mozilla.org/en-US
     ```typescript
     import { Crypto } from "@peculiar/webcrypto";
 
-    const wh = await Webhook(key, new Crypto().subtle);
+    const wh = await Webhook(secret, new Crypto().subtle);
     ```
 
