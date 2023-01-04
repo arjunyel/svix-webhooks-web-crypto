@@ -13,6 +13,7 @@ Works in Cloudflare Workers, Deno, and >= Node.js 16.
 This library depends on the [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API). Node.js >= 19 is supported natively. Node 16 - 18 can be supported by either:
 
 - Ideally, Run Node.js with the `--experimental-global-webcrypto` flag
+
 - At your own risk, use a `SubtleCrypto` polyfill like [`@peculiar/webcrypto`](https://github.com/PeculiarVentures/webcrypto)
     ```typescript
     import { Crypto } from "@peculiar/webcrypto";
@@ -20,3 +21,30 @@ This library depends on the [Web Crypto API](https://developer.mozilla.org/en-US
     const wh = await Webhook(secret, new Crypto().subtle);
     ```
 
+## Development
+
+Uses [dnt](https://github.com/denoland/dnt) to build and test for Deno and [Node.js >= 19](https://nodejs.org/en/).
+
+### Dependencies
+
+Requires [Deno](https://deno.land/)
+
+### Run tests
+
+```bash
+deno task test
+```
+
+### Build
+
+```bash
+deno task build
+```
+
+### Publish to NPM
+
+```bash
+deno task build
+cd npm
+npm publish
+```

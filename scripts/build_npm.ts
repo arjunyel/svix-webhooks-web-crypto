@@ -4,7 +4,7 @@ import { build, emptyDir } from "https://deno.land/x/dnt@0.32.0/mod.ts";
 await emptyDir("./npm");
 
 await build({
-  entryPoints: ["./main.ts"],
+  entryPoints: ["./src/main.ts"],
   outDir: "./npm",
   compilerOptions: {
     target: "Latest",
